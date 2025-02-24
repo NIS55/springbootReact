@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const initialData = [1, 2, 3, 4, 5].map((no) => ({
+        studentNo: no,
+        math: 0,
+        eng: 0,
+        korea: 0,
+        total: 0,
+        avg: 0,
+        grade: "",
+      }));
+
+      console.log(initialData);
+
+      // 추가
+      initialData.push({
+        studentNo: 8,
+        math: 200,
+        eng: 340,
+        korea: 450,
+        total: 990,
+        avg: 330,
+        grade: "A",
+      });
+
+      console.log(initialData);
+
+      console.log("===============================================");
+
+      for (let index = 0; index < initialData.length; index++) {
+        console.log(initialData.shift()); // Queue FIFO
+      }
+
+      //   console.log("===============================================");
+
+      //   for (let index = 0; index < initialData.length; index++) {
+      //     console.log(initialData.pop()); // Stack LIFO
+      //   }
+    </script>
+  </body>
+</html>

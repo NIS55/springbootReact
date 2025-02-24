@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  </head>
+  <body>
+    <script>
+      $(document).ready(function () {
+        var colors = [];
+
+        for (var i = 0; i < 6; i++) {
+          colors.push("" + i);
+        }
+        colors.push("A");
+        colors.push("B");
+        colors.push("C");
+        colors.push("D");
+        colors.push("E");
+        colors.push("F");
+
+        // console.log(colors);
+
+        // var u = parseInt(Math.random() * 100);
+        // console.log(u);
+
+        const generateColor = () => {
+          //1초마다 이 함수가 호출되도록 하고
+          //문자열을 반환 ex) #0022ff;
+
+          var ran = "#";
+
+          for (var i = 0; i < 6; i++) {
+            var randIdx = parseInt(Math.random() * colors.length);
+            ran += colors[randIdx];
+          }
+          console.log(ran);
+          return ran;
+        };
+
+        const f = () => {
+          var col = generateColor(); //문자열 생성 함수 호출하고
+          $("button").css("color", col); //R(FF)G(00)B(DD) 그 결과를 원하는 대상에 적용
+        };
+
+        $("button").click(function () {
+          $("button").css("color", col); // R(FF)G(00)B(DD)
+        });
+
+        setInterval(f, 1000);
+      });
+    </script>
+
+    <button>눌러라</button>
+  </body>
+</html>

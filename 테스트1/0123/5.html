@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var list = [
+        { a: 12, d: [11, 22, 33, 44], b: 44, c: 111 },
+        { a: 22, d: [121, 242, 313, 484], b: 441, c: 61 },
+        { a: 232, d: [113, 223, 333, 414], b: 442, c: 171 },
+        { a: 55, d: [112, 212, 3113, 424], b: 444, c: 181 },
+        { a: 66, d: [141, 282, 3333, 444], b: 447, c: 191 },
+        { a: 88, d: [171, 292, 3773, 434], b: 434, c: 1111 },
+      ];
+
+      const sum_calc = (i) => {
+        //배열을 하나씩 받아서 총합을 구하는 함수
+        var sum5 = 0;
+        for (var u of i) {
+          sum5 += u;
+        }
+        return sum5;
+      };
+
+      var result = list.map((i) => i.d); // list에서 key가 d인 것들만 추출
+      console.log(result); // 2차원 배열
+
+      var arry1 = result.map((i) => sum_calc(i)); //1차원 배열
+      console.log(arry1);
+
+      const f_large_100 = (i) => i > 100;
+      var vvv = arry1.filter(f_large_100).map((i) => i * 3);
+      console.log(vvv);
+    </script>
+  </body>
+</html>

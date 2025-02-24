@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var list = [
+        [11, 22, 33, 44],
+        [121, 242, 313, 484],
+        [113, 223, 333, 414],
+        [112, 212, 3113, 424],
+        [141, 282, 3333, 444],
+        [171, 292, 3773, 434],
+      ];
+
+      //문제1) 가로의 합
+
+      const calc1 = (i) => {
+        //가로로 더하는 기능
+        var sum6 = 0;
+        for (var u of i) {
+          sum6 += u;
+        }
+
+        return sum6;
+      };
+
+      var result = list.map((i) => i);
+      console.log(result); // 2차원 배열
+
+      var arr1 = result.map((i) => calc1(i));
+      console.log(arr1); // 1차원 배열
+
+      // 문제 2) 세로의 합
+
+      var u1 = list.map((i) => i[0]);
+      console.log(u1);
+
+      var u2 = list.map((i) => i[1]);
+      console.log(u2);
+
+      var u3 = list.map((i) => i[2]);
+      console.log(u3);
+
+      var u4 = list.map((i) => i[3]);
+      console.log(u4);
+
+      var tranpose = [u1, u2, u3, u4];
+      console.log(tranpose);
+
+      //더하기
+      const calc2 = (i) => {
+        var sum66 = 0;
+        for (var uu of i) {
+          sum66 += uu;
+        }
+        return sum66;
+      };
+
+      var arr2 = tranpose.map((i) => calc2(i));
+      console.log(arr2);
+    </script>
+  </body>
+</html>

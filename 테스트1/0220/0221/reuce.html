@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const f = (acc, cur) => {
+        console.log("acc", acc, ",cur", cur);
+        return acc + cur;
+      };
+
+      [11, 1, 2, 3, 4, 5, 6].reduce(f, 0);
+
+      // =====================================================
+      //cur는 배열을 순회할 때 현재 값 a[0], a[1] .....
+      //acc는 누적된 결과 0, 0+a[0] , 0+a[0]+a[1]
+      //acc + cur를 하는 것은 계속 cur를 누적해간다는 뜻
+      // [ ].reudce( (함수) , 초기값 )
+
+      const items = [
+        { price: 500, quantity: 5 },
+        { price: 300, quantity: 3 },
+        { price: 700, quantity: 2 },
+      ];
+
+      const total = items.reduce(
+        (acc, cur) => {
+          console.log("acc", acc, ",cur", cur);
+          acc.totalPrice += cur.price * cur.quantity;
+          acc.totalQuantity += cur.quantity;
+          return acc;
+        },
+        { totalPrice: 400, totalQuantity: 10 } // 초기값
+      );
+
+      console.log(total);
+
+      // ========================================================
+
+      const item = [
+        { price: 500, quantity: 5 },
+        { price: 20, quantity: 3 },
+        { price: 70, quantity: 7 },
+      ];
+
+      const Total = item.reduce(
+        (acc, cur) => {
+          console.log("acc", acc, ",cur", cur);
+          acc.totalp += cur.price * cur.quantity;
+          acc.totalq += cur.quantity;
+          return acc;
+        },
+        { totalp: 0, totalq: 0 }
+      );
+
+      console.log(Total);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //함수 선언(definition, declaration)
+      //f()에서 f는 함수 이름
+      //   function f() {
+      //     return 3;
+      //   }
+
+      //   //함수 호출
+      //   var u = f();
+      //   console.log(u);
+
+      //   //익명함수, 함수 이름이 없다.
+      //   // 상수형 변수 f에 익명 함수 저장
+      //   const ff = function () {
+      //     return 3;
+      //   };
+
+      //화살표 함수
+      //return 생략 가능
+      const f = (i) => i + 3;
+
+      var u = f(7);
+      console.log(u); // 10이 나오도록 수정
+
+      //문제 2)
+      const v = (a, b, c) => a + b + c;
+
+      var add = v(2, 3, 4);
+      console.log(add);
+
+      //문제 3)
+      //첫번째의 3배 + 두번째의 5배
+      const s = (a, b) => 3 * a + 5 * b;
+
+      var result = s(10, 20);
+      console.log(result);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var list = [
+        { a: 12, b: 44, c: 111 },
+        { a: 22, b: 441, c: 61 },
+        { a: 232, b: 442, c: 171 },
+        { a: 55, b: 444, c: 181 },
+        { a: 66, b: 447, c: 191 },
+        { a: 88, b: 434, c: 1111 },
+      ];
+      console.log(list);
+      //문제 2.
+      // {'a':'a의 합', 'b': 'b의 합','c':'c의 합'}
+
+      var aSum = 0;
+      var bSum = 0;
+      var cSum = 0;
+
+      list.forEach((list) => {
+        aSum += list.a;
+        bSum += list.b;
+        cSum += list.c;
+      });
+
+      console.log(aSum);
+      console.log(bSum);
+      console.log(cSum);
+    </script>
+  </body>
+</html>

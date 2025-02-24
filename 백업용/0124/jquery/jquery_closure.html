@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  </head>
+  <body>
+    <p>클로저를 사용한 counting</p>
+    <button id="increase">+</button>
+    <p id="count">0</p>
+
+    <script>
+      $(document).ready(function () {
+        //document가 ready(준비가 되면, 내부의 익명함수 실행)
+
+        var count = $("#count");
+
+        var increase = (function () {
+          // 카운트 상태를 유지하기 위한 자유 변수
+          var counter = 0;
+
+          //클로저 변환
+          return function () {
+            ++counter;
+            count.html(counter);
+          };
+        })(); // IIFE(Immediately Inovoked Function Expression): 즉시 호출되는 함수 표현식
+
+        $("#increase").on("click", function () {
+          console.log("호출되는가?");
+          increase();
+        });
+      });
+      //on은 대상 이벤트를 등록
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function f(i) { //자바스크립트는 은닉(hidden)
+        return function (j) {
+          //closure
+          // 1) 함수가 중첩되어있음
+          // 2) 외부 함수가 내부 함수를 반환함
+          // 3) 내부함수에서 외부 함수의 지역 변수를 참조함
+
+          return i + j;
+        };
+      }
+
+      const g = (i) => (j) => i + j;
+
+      console.log(f(2)(3));
+      console.log(g(4)(2));
+    </script>
+  </body>
+</html>

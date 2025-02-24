@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  </head>
+  <body>
+    <script>
+      $(document).ready(function () {
+        var flag = false;
+        var cnt = 0;
+
+        $("button").click(() => {
+          console.log("눌렸다");
+
+          flag != flag;
+          if (flag) $("button").text("눌러라" + cnt++);
+          else $("button").text("바뀜" + cnt++);
+        });
+      });
+    </script>
+
+    <button>눌러라</button>
+  </body>
+</html>

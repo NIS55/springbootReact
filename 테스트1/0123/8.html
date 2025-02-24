@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //문1)
+      const f = (u, v) => v["a"];
+      //위의 함수를 호출하고 결과 출력(오류 발생하지 않도록 처리)
+      var ff = f(3, { a: [1, 2, 3, 4] });
+      console.log(ff);
+
+      var fff = f(3, { a: (a, b, c) => a + b + c });
+      console.log(fff(3, 4, 5));
+
+      //문2)
+      const g = (u, v, w) => u(w) + v(w);
+      //위의 함수를 호출하고 결과 출력(오류 발생하지 않도록 처리)
+
+      var gg = g(
+        (a) => a * 10,
+        (b) => b * 20,
+        1
+      );
+      console.log(gg);
+
+      //문3)
+      //r은 배열이고 배열의 짝수의 총합을 반환
+      // 객체를 전달....
+
+      const k = ({ r }) => {
+        var sumEven = 0;
+        for (var i of r) {
+          if (i % 2 == 0) {
+            sumEven += i;
+          }
+        }
+        return sumEven;
+      };
+
+      console.log(k({ r: [1, 2, 3, 4] }));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //일반 for문 사용
+
+      //   const u = (v) => {
+      //     var sum = 0;
+
+      //     for (var i = 0; i < v.length; i++) {
+      //       sum += v[i];
+      //     }
+      //     return sum;
+      //   };
+
+      const u = (v) => {
+        //여기를 채우세요.
+        //v는 배열이 들어오고 배열의 총합을 반환함
+        //for of : 배열의 각 요소에 직접 접근
+        var sum = 0;
+        for (var i of v) {
+          sum += i;
+        }
+        return sum;
+      };
+
+      //여기에서 위의 함수를 호출하세요.
+      const result = u([11, 22, 33, 44]);
+
+      //결과를 출력.
+      console.log(result);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //문1)
+      const u = ({ tt, vv }) => {
+        return tt[0] + vv("사랑");
+      };
+
+      // {tt: [1,2,3,4,5] , vv((i) => i) }
+      var a = { tt: [1, 2, 3, 4, 5], vv: (i) => i };
+
+      console.log(u(a));
+      console.log(
+        u({
+          tt: [5, 4, 3, 2, 1],
+          vv: (v) => {
+            var aa = "";
+            for (let i = 0; i < 10; i++) {
+              aa += v;
+            }
+            aa += "\n믿음";
+            return aa;
+          },
+        })
+      );
+
+      //문2) 짝수와 홀수를 분할하여 {짝: 짝수의 갯수, 홀: 홀수의 갯수} 반환
+
+      const v = (r) => {
+        const { uvw } = r;
+
+        var even = 0;
+        var odd = 0;
+
+        for (var i of uvw) {
+          if (i % 2 == 0) {
+            even += 1;
+          } else {
+            odd += 1;
+          }
+        }
+        return { 짝: even, 홀: odd };
+      };
+
+      console.log(v((r = { uvw: [1, 2, 3] })));
+
+      //문3)
+      const w = (i) => {
+        var sum1 = 0;
+
+        for (var q of i) {
+          sum1 += q.vv; //vv를 키로 받는 객체 배열
+        }
+        return sum1;
+      };
+
+    //   const ww = (i) => i.map((v) => v.vv); // 일반map
+      const ww = (i) => i.map((v) => v.vv).reduce((i,j) => i+j); // reduce 사용
+
+
+      console.log(
+        w([{ vv: 31 }, { vv: 32 }, { vv: 33 }, { vv: 34 }, { vv: 35 }])
+      );
+      console.log(
+        ww([{ vv: 31 }, { vv: 32 }, { vv: 33 }, { vv: 34 }, { vv: 35 }])
+      );
+
+    
+    </script>
+  </body>
+</html>

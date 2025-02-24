@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var arr = [
+        { a: "홍길동1" },
+        { a: "홍길동2" },
+        { a: "홍길동3" },
+        { a: "홍길동4" },
+      ];
+
+      //   console.log(arr[0].a);
+      //   console.log(arr[0]["a"]);
+      //   console.log(arr[0]);
+
+      //   console.log(arr[1].a);
+      //   console.log(arr[2].a);
+      //   console.log(arr[3].a);
+
+      //   index 사용한 반복문
+      //   for (let i = 0; i < arr.length; i++) {
+      //     console.log(arr[i]);
+      //   }
+      //   console.log("===========================================");
+
+      //   // enhanced for 사용한 반복문
+      //   for (var i of arr) {
+      //     console.log(i.a);
+      //   }
+      //   console.log("=========================================");
+
+      for (let i = 0; i < arr.length; i++) {
+        console.log(arr[i].a);
+        console.log("===========================================" + (i + 1));
+      }
+
+      let index = 1;
+      for (var i of arr) {
+        console.log(i.a);
+        console.log("===========================================" + index);
+        index++;
+      }
+    </script>
+  </body>
+</html>

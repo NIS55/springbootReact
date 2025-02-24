@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var obj2 = {
+        홍: {
+          a: [1, 2, 3, 4],
+          b: [11, 12, 23, 45],
+          c: [111, 222, 333, 444],
+        },
+
+        말: {
+          a: [14, 22, 33, 41],
+          b: [113, 122, 231, 454],
+          c: [23, 67, 89, 100],
+        },
+      };
+      console.log(obj2.홍);
+      //[14,22,33,41] 배열의 총합 구하세요 obj2.말.a
+
+      //일반 반복문
+      var result1 = 0;
+      var temp1 = obj2.말.a;
+
+      console.log(a); // [14, 22, 33, 41]
+
+      for (let i = 0; i < temp1.length; i++) {
+        result1 += temp1[i];
+      }
+
+      console.log(result1);
+
+      //for of 반복문
+      result1 = 0;
+
+      for (let i of temp1) {
+        result1 += i;
+      }
+
+      console.log(result1);
+
+      //destruction
+      var { 말 } = obj2;
+      var { a } = 말;
+
+      var result2 = 0;
+
+      for (let i = 0; i < a.length; i++) {
+        result2 += a[i];
+      }
+
+      console.log(a); //[14, 22, 33, 41]
+      console.log(result2);
+    </script>
+  </body>
+</html>

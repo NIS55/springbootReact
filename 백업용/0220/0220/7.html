@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //문1) f함수 호출하여 사랑 문자열 출력
+      function f() {
+        return "사랑";
+      }
+
+      var u = f();
+
+      console.log(u);
+
+      //문2) 화살표 함수로 바꾸세요.
+      //   function g(a) {
+      //     "사랑" + a;
+      //   }
+
+      const g = (a) => {
+        return "사랑" + a;
+      };
+
+      console.log(g(2));
+
+      //문3) 화살표 함수로 바꾸세요.
+      //   function uv(i, j) {
+      //     return i + j;
+      //   }
+
+      const uv = (i, j) => i + j;
+
+      var k = uv(1, 2);
+      console.log(uv(2, 3));
+      console.log(k);
+
+      //문3-1)
+      var uvv = [1, 2, 3, 4].map((i) => i + 3);
+      console.log(uvv);
+
+      var p = [
+        (i, j) => i + j,
+        (i, j) => i - j,
+        (i, j) => i * j,
+        (i, j) => i / j,
+      ].map((i) => i(3, 4));
+
+      console.log(p);
+
+      //문4) 문제를 만들어서 푸세요. 배열 안에 객체가 4개.
+      //각각의 객체는 key(fn)이고 value가 함수입니다.
+      //(map을 사용하여 함수 호출)
+
+      const a = (i) => i + 5;
+      const b = (i) => i - 5;
+      const c = (i) => i * 5;
+      const d = (i) => i / 5;
+
+      var f = [{ fn: a }, { fn: b }, { fn: c }, { fn: d }];
+
+      var u = [
+        { a: (i) => i + 5 },
+        { a: (i) => i - 5 },
+        { a: (i) => i * 5 },
+        { a: (i) => i / 5 },
+      ];
+
+      var result1 = f.map(({ fn }) => fn(10));
+      console.log(result1);
+
+      var result2 = u.map(({ a }) => a(10));
+      console.log(result2);
+
+      //문5)
+      const vr = (i) => {
+        var even = 0;
+        var odd = 0;
+
+        //i에는 배열이 전달. 배열의 짝수의 총합과 홀수의 총합을 구하고 객체로 반환함
+
+        for (var a = 0; a < i.length; a++) {
+          if (i[a] % 2 == 0) {
+            even += i[a];
+          } else {
+            odd += i[a];
+          }
+        }
+        return { 짝수: even, 홀수: odd };
+      };
+
+      var result = vr([2, 3, 5, 11, 34]);
+      console.log(result);
+
+      //문6) 객체의 a에 대응하는 배열(함수들의 모임)을 호출하세요
+      // var uvw = { a: [(i) => i + 1, (i) => i + 2, (i) => i + 3] };
+
+      var uvw = { A: [(i) => i + 1, (i) => i + 2, (i) => i + 3] };
+
+      var result3 = uvw.A.map((i) => i(2));
+      console.log(result3); // [3,4,5]
+
+      var { A } = uvw;
+      var res1 = A.map((i) => i(5)); // [6,7,8]
+      console.log(res1);
+
+      // //문7) i를 받아서 i단의 구구단 문자열을 반환하는 기능 구현
+      // const gugu = (i) => {};
+
+      const gugu = (i) => {
+        var mul = "";
+        for (var j = 1; j < 10; j++) {
+          mul += i + "*" + j + "=" + i * j + " ";
+        }
+        return mul;
+      };
+
+      console.log(gugu(2));
+
+      // // 8) 아래의 코드를 이해
+      // const pow = (a, b) => {
+      //   var mul = 1;
+      //   for (var i = 0; i < b; i++) {
+      //     mul *= a;
+      //   }
+      //   return mul;
+      // };
+      // console.log(pow(3, 4)); // 81
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   function sum(i, j) {
+      //     return i + j;
+      //   }
+
+      const sum = (i, j) => i + j;
+      const minus = (i, j) => i - j;
+      const mul = (i, j) => i * j;
+      const div = (i, j) => i / j;
+
+      console.log(sum(3, 4));
+      console.log(minus(3, 4));
+      console.log(mul(3, 4));
+      console.log(div(3, 4));
+
+      const funArray = [sum, minus, mul, div];
+      var u = funArray.map((i) => i(3, 4));
+      console.log(u);
+    </script>
+  </body>
+</html>

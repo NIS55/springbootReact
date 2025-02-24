@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function f(i) {
+        console.log(i);
+        //return i.a; //f 함수의 내용(여기)를 변경하세요.
+        return i["1"];
+      }
+
+      var r = f({ 1: "사랑" }); // {a: "사랑"} = literal 객체
+      console.log(r); // 콘솔에 "사랑"이 출력되도록 수정해라.
+
+      //destructuring
+      //console.clear();
+
+      var { a } = { a: "사랑" };
+      console.log(a);
+    </script>
+  </body>
+</html>

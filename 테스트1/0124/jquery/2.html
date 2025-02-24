@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  </head>
+  <body>
+    <script>
+      $(document).ready(function () {
+        const f = (i) => $("button").text("사랑" + i);
+
+        var cnt = 0;
+
+        setInterval(() => {
+          if (cnt > 5) cnt = 0; //50이 되면 0으로 초기화
+          f(cnt++);
+        }, 1000);
+      });
+
+     
+    </script>
+
+    <button>눌러라</button>
+  </body>
+</html>

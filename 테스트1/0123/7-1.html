@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   function sum(i, j) {
+      //     return i + j;
+      //   }
+
+      const sum = (i, j) => i + j;
+      const minus = (i, j) => i - j;
+      const mul = (i, j) => i * j;
+      const div = (i, j) => i / j;
+
+      console.log(sum(3, 4));
+      console.log(minus(3, 4));
+      console.log(mul(3, 4));
+      console.log(div(3, 4));
+
+      const funArray = { fn: [sum, minus, mul, div] };
+
+      //호출하기
+      const { fn } = funArray;
+      var u = fn.map((i) => i(3, 4));
+      console.log(u);
+
+      const fnReturn = (i) => funArray.fn; // i를 받아서 처리하지 않는다. fn 변수(함수들의 모임)를 반환
+      //fnReturn은 함수이므로 호출을 하여야 반환되는 값을 가진다.
+      var uu = fnReturn(5)[0](2, 7); // fnReturn(5) => funArray.fn 를 반환하고
+      console.log(uu);
+
+      //callback 함수
+      function g(k, v) {
+        return v(k);
+      }
+      var rrr = g(3, (u) => u * 2);
+      console.log(rrr);
+      
+    </script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var list = [
+        { a: 12, d: [11, 22, 33, 44], b: 44, c: 111 },
+        { a: 22, d: [121, 242, 313, 484], b: 441, c: 61 },
+        { a: 232, d: [113, 223, 333, 414], b: 442, c: 171 },
+        { a: 55, d: [112, 212, 3113, 424], b: 444, c: 181 },
+        { a: 66, d: [141, 282, 3333, 444], b: 447, c: 191 },
+        { a: 88, d: [171, 292, 3773, 434], b: 434, c: 1111 },
+      ];
+
+      var obj = {};
+
+      for (var i = 0; i < list.length; i++) {
+        var u = list[i].d; // [11,22,33,44]
+        var internal = [];
+
+        for (var j = 0; j < u.length; j++) {
+          console.log("데이터: " + u[j]);
+          internal.push(u[j] * 2);
+          var out = [];
+
+          for (var k = 0; k < internal.length; k++) {
+            if (internal[i] > 100) {
+              out.push(internal[i]);
+            }
+          }
+          console.log("out", out);
+          var final1 = [];
+
+          for (var r = 0; r < out.length; r++) {
+            final1.push(out[r] * 3);
+          }
+        }
+        console.log("internal" + internal);
+        obj["d"] = internal;
+      }
+    </script>
+  </body>
+</html>

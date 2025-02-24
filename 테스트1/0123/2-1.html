@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function f({ vv }) {
+        var { r } = vv;
+
+        // function f({vv:{r}}) 의 형태도 가능하지만 복잡해보인다.
+        var sum = 0;
+
+        for (var i of r) {
+          sum += i;
+        }
+
+        return sum;
+      }
+
+      var u = f({ vv: { r: [11, 22, 33, 44, 55] } });
+
+      console.log(u); // 배열의 총합을 구한 결과물
+      console.log(11 + 22 + 33 + 44 + 55); // 165
+    </script>
+  </body>
+</html>

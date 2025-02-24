@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const f = (i) => i(30); // i는 함수 i=> (v) =>  v*30
+
+      var u = f((v) => v * 30);
+      console.log(u);
+
+      console.clear();
+
+      const g = ({ v }) => v(70);
+      //문1)
+      //데이터 전달할 때 어떻게 전달하나요?
+
+      var result = g({ v: (a) => a * 2 });
+      console.log(result);
+
+      //문2)
+      //hint1. 배열로 와야 한다.
+      const fnArray = (i) => {
+        return i.map((v) => v(30));
+      };
+
+      var result2 = fnArray([(a) => a * 30, (b) => b * 20]);
+      console.log(result2);
+
+      //문3)
+      const fnArray2 = (i, j) => {
+        return i.map((v) => v(j));
+      };
+
+      var result3 = fnArray2([(a) => a * 30, (b) => b * 20], 100);
+      console.log(result3);
+    </script>
+  </body>
+</html>
