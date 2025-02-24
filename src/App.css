@@ -1,0 +1,101 @@
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+/* 배경 이미지 추가 */
+
+/* 배경 이미지 추가 */
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 110vh;
+  background-image: url("/src/HighComponent/images/a2.jpg");
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, sans-serif;
+  color: rgb(0, 0, 0);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #ff0000;
+}
+
+/* 반을 나타내는 박스 스타일 */
+.BanComponent {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* 학생 박스 스타일 */
+.BunComponent {
+  background-color: #a3ffe5cc;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px;
+  box-sizing: border-box;
+  width: 25%;
+  text-align: center;
+}
+
+.subject {
+  margin: 10px 0;
+}
+
+input[type="number"] {
+  width: 80%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #000000;
+  border-radius: 4px;
+}
+
+.result {
+  margin-top: 20px;
+  background-color: #bbdcff;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 16px;
+}

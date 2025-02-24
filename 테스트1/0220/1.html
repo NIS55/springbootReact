@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+  // 문2) 함수 호출하여 결과를 출력하세요.
+console.log("1번 문제");
+
+var a = {tt: [1,2] , vv: ((o)=> o )};
+ 
+    const u =({tt,vv})=>{
+      return tt[0]+vv("사랑")
+    }
+      console.log(u(a));
+
+
+
+
+      
+      // 문2) 짝수와 홀수를 분할하여 
+      // { 짝: 짝수의 갯수, 홀: 홀수의 갯수} 반환
+      console.log("2번 문제");
+
+    var r = {uvw: [1,2,3]};
+
+      const v = (r) => {
+        const { uvw } =r;
+        var sum1 =0;
+        var j = 0;
+        var h = 0;
+        for(var i of uvw){
+          if(i % 2 == 0){
+            j += 1;
+          }else{
+            h += 1;
+          }
+          sum1 = {짝: j , 홀: h};
+        }
+        // return {짝: j , 홀: h };
+        return sum1;
+      }
+      console.log(v(r));
+      
+      //
+
+      // 문3) 데이터 만들어서 출력
+      
+      console.log("3번 문제");
+
+      const w = (i) => {
+        var sum1 = 0;
+        for(var q of i){
+            sum1 += q.vv;
+        }
+        return sum1;
+      };
+      console.log(w([
+        { vv : 3},
+        { vv : 13},
+        { vv : 23},
+        { vv : 33},
+        { vv : 43},
+        { vv : 53},
+
+      ]));
+
+
+
+  </script>
+</body>
+</html>

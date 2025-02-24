@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var arr = [
+        { a: "홍길동1" },
+        { a: "홍길동2" },
+        { a: "홍길동3" },
+        { a: "홍길동4" },
+      ];
+
+      for (var i = 0; i < arr.length; i++) {
+        console.log(arr[i].a);
+        console.log("==============" + (i + 1));
+        // console.log(arr[0].a);
+        // "홍길동1"
+        // console.log(arr[i]);
+        // { a: "홍길동1" },
+      }
+
+      console.log("2번 문제");
+
+      var sum1 = 1;
+      for (var i of arr) {
+        console.log(i.a);
+        console.log("==============" + sum1++);
+        // console.log("==============" + sum1 );
+      }
+
+      console.log("3번 문제");
+
+      var v = [{ a: "사랑" }, { a: "믿음" }, { a: "증오" }];
+
+      for (var i = 1; i < 4; i++) {
+        // console.log(v[0].a + sum2++);
+        console.log(v[0].a + i * 1);
+      }
+
+      console.log("4번 문제");
+
+      for (var i = 1; i < 4; i++) {
+        // console.log(v[0].a + sum2++);
+        console.log(v[0].a + i * 1);
+        console.log(v[1].a + i * 1);
+        console.log(v[2].a + i * 1);
+      }
+
+      console.log("5-3번 문제");
+      // var arr = [1,2,3] 반복문으로 변경
+
+      // arr[ 0 ] +=2 = 3
+      // ("======")
+      // arr[ 1 ] +=3 = 5
+      // (======)
+      // arr[ 2 ] +=4 = 7
+      // (======)
+
+      var arr = [1, 2, 3];
+      var sum5 = 2;
+      for (var i of arr) {
+        console.log(i + sum5++);
+        console.log("======================");
+      }
+
+      console.log("4번 문제");
+
+      // var k = [1, 2, 3, 4, 5];
+      // 배열 [1,2,3,4,5] 을 짝수 6, 홀수9로 출력
+
+      var k = [1, 2, 3, 4, 5];
+      // var to = { a: even, odd };
+
+      var even = 0;
+      var add = 0;
+      var to = { 홀: even, 짝: add };
+
+      for (var i = 0; i < 5; i++) {
+        if (k[i] % 2 == 0) {
+          even += k[i];
+        } else {
+          add += k[i];
+        }
+      }
+      console.log(to);
+
+      
+
+
+
+
+      // console.log(arr[0].a);
+      // console.log("==============1")
+      // console.log(arr[1].a);
+      // console.log("==============2")
+      // console.log(arr[2].a);
+      // console.log("==============3")
+      // console.log(arr[3].a);
+    </script>
+  </body>
+</html>
